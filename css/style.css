@@ -1,4 +1,16 @@
 /* UTILES  */
+
+.bg-tercer {
+    background: var(--tercer-color);
+}
+
+.text-primer {
+    color: var(--primer-color);
+}
+.text-tercer {
+    color: var(--tercer-color-color);
+}
+
 /* NAVBAR */
 .nav-bar-asorco {
     background: var(--tercer-color);
@@ -375,12 +387,12 @@
 /*** Feature Start ***/
 .feature .feature-item {
     border-radius: 10px;
-    background: var(--bs-white);
+    background: var(--tercer-color);
     transition: 0.5s;
 }
 
 .feature .feature-item:hover {
-    background: var(--bs-primary);
+    background: var(--bs-white);
 }
 
 .feature .feature-item .feature-icon {
@@ -407,7 +419,7 @@
     left: 0;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    background: var(--bs-dark);
+    background: var(--primer-color);
     transition: 0.5s;
     z-index: 1;
 }
@@ -417,7 +429,7 @@
 }
 
 .feature .feature-item .feature-icon {
-    color: var(--bs-primary);
+    color: var(--primer-color);
 }
 
 .feature .feature-item .feature-icon,
@@ -427,11 +439,19 @@
 }
 
 .feature .feature-item:hover .feature-icon {
+    color: var(--tercer-color);
+}
+
+.feature .feature-item h4 {
+    color: var(--primer-color);
+}
+.feature .feature-item p {
     color: var(--bs-white);
 }
+
 .feature .feature-item:hover h4,
 .feature .feature-item:hover p {
-    color: var(--bs-white);
+    color: var(--tercer-color);
 }
 
 .feature .feature-item:hover a.btn {
