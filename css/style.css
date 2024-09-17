@@ -21,6 +21,15 @@
     color: var(--primer-color) !important;
 }
 
+.bg-asorco {
+    background: rgb(248, 197, 20);
+    background: linear-gradient(
+        90deg,
+        rgba(248, 197, 20, 1) 0%,
+        rgba(255, 150, 78, 1) 69%
+    );
+}
+
 /*** Spinner Start ***/
 #spinner {
     opacity: 0;

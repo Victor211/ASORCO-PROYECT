@@ -3,7 +3,8 @@
 $consultas = null;
 try {
     // Crear una nueva instancia de PDO para la conexión
-    $dsn = "mysql:host=locahost;dbname=asorco-archivos;charset=utf8mb4";
+    $dsn =
+        "mysql:host=localhost;port=3306;dbname=asorco-archivos;charset=utf8mb4";
     $options = [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, // Manejar errores mediante excepciones
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC, // Devolver resultados como un array asociativo
