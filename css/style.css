@@ -249,7 +249,7 @@
         justify-content: center;
         align-items: center;
         background: var(--bs-light);
-        border-radius: 10px;
+        border-radius: 30px;
     }
 
     .navbar .navbar-nav .nav-btn {
@@ -389,6 +389,7 @@
     border-radius: 10px;
     background: var(--tercer-color);
     transition: 0.5s;
+    height: 100%;
 }
 
 .feature .feature-item:hover {
