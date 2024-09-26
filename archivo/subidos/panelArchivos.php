@@ -24,7 +24,7 @@
                 <?php
                 // Conexión a la base de datos
                 $host = "localhost";
-                $dbname = "asorco-archivos";
+                $dbname = "asorco_archivos";
                 $user = "root";
                 $pass = "";
 
