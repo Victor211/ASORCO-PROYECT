@@ -13,7 +13,7 @@ try {
     $consultas = new PDO($dsn, "root", "", []);
 
     // Mensaje para verificar que la conexión fue exitosa
-    echo "Conexión exitosa a la base de datos.";
+    // echo "Conexión exitosa a la base de datos.";
 } catch (PDOException $e) {
     // Captura cualquier error de conexión y lo muestra
     die("Error al conectar a la base de datos: " . $e->getMessage());
@@ -62,19 +62,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     "cod" => "10",
                     "msg" => "Credenciales incorrectas",
                 ]);
+                header("Location: panelArchivos.php?");
             }
         } else {
             echo json_encode([
                 "cod" => "10",
                 "msg" => "Credenciales incorrectas",
             ]);
+            header("Location: login.php?error=credenciales");
         }
     } else {
         echo json_encode([
             "cod" => "06",
             "msg" => "Faltan datos de inicio de sesión",
         ]);
+        header("Location: login.php?error=datos");
     }
 } else {
     echo json_encode(["cod" => "91", "msg" => "Método de solicitud no válido"]);
+    header("Location: login.php?error=datos");
 }

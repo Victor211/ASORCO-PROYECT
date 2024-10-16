@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php session_start(); ?>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -11,6 +12,15 @@
 
     <div class="container mt-5">
         <h1 class="text-center mb-4">Gestión de Archivos</h1>
+        <div class="container-fluid py-3">
+            <div class="row">
+                <div class="col col-md-8">
+                </div>
+                <div class="col col-md-4">
+                    <input class="btn btn-primary" type="button" value="Cargar Archivos" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                </div>
+            </div>
+        </div>
         <table class="table table-striped table-bordered">
             <thead class="table-dark">
                 <tr>
@@ -70,6 +80,33 @@
                 ?>
             </tbody>
         </table>
+    </div>
+    <!-- MODAL PARA CARGA DE ARCHIVOS -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Nuevo Archivo - Asorco</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <form>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" >Archivo</span>
+                    <input class="form-control" type="file" id="formFile" name="doc" required>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Nombre Archivo</span>
+                    <input class="form-control" type="password" name="password" placeholder="Ej: doc-20241109.pdf">
+                </div>
+              </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary">Guardar</button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Bootstrap 5 JS -->
