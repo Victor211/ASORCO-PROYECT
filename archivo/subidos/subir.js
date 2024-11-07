@@ -7,7 +7,7 @@ async function subirArchivos() {
 
     console.log(formEnviar);
 
-    let temp = fetch("./subir.php", {
+    let temp = await fetch("./subir.php", {
         method: "POST",
         body: formEnviar,
     });
