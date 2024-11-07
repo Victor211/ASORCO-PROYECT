@@ -90,20 +90,20 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-              <form>
+              <form id="cargarArchivos">
                 <div class="input-group mb-3">
                     <span class="input-group-text" >Archivo</span>
                     <input class="form-control" type="file" id="formFile" name="doc" required>
                 </div>
                 <div class="input-group mb-3">
                     <span class="input-group-text">Nombre Archivo</span>
-                    <input class="form-control" type="password" name="password" placeholder="Ej: doc-20241109.pdf">
+                    <input class="form-control" type="text" name="nombreArchivo" placeholder="Ej: doc-20241109.pdf">
                 </div>
               </form>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-            <button type="button" class="btn btn-primary">Guardar</button>
+            <button type="button" class="btn btn-primary" onclick="subirArchivos()">Guardar</button>
           </div>
         </div>
       </div>
@@ -111,5 +111,6 @@
 
     <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="subir.js"></script>
 </body>
 </html>
