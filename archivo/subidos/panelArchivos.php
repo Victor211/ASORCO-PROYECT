@@ -48,7 +48,7 @@
 
                     // Consulta SQL
                     $sql =
-                        "SELECT usuario_id, nombre_archivo, nombre_archivo AS nombre_mostrar, fecha_subida FROM archivos";
+                        "SELECT usuario_id, nombre_archivo, nombre_mostrar , fecha_subida FROM archivos";
                     $stmt = $pdo->query($sql);
 
                     // Verificar si hay resultados
