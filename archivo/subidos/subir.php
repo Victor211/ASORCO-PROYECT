@@ -26,8 +26,9 @@ try {
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
     ]);
+    $usuario = $_SESSION["id"] ?? "1";
     $pdo->query(
-        "INSERT INTO archivos (nombre_archivo,nombre_mostrar) VALUES ('{$_POST["nombreArchivo"]}','{$path_nuevo}')"
+        "INSERT INTO archivos (nombre_archivo,nombre_mostrar,usuario_id) VALUES ('{$path_nuevo}','{$_POST["nombreArchivo"]}','{$usuario}')"
     );
     echo json_encode(["cod" => "00", "msg" => "Guardado correctamente"]);
 } catch (Exception $e) {
