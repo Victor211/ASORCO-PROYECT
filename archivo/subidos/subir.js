@@ -11,4 +11,5 @@ async function subirArchivos() {
         method: "POST",
         body: formEnviar,
     });
+    window.location.reload();
 }
